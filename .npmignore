@@ -1,0 +1,8 @@
+.gitignore
+
+test/
+.travis.yml
+
+gulpfile.js
+
+.eslintrc
