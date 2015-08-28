@@ -29,5 +29,9 @@ test('postcss-autoreset', (t)=> {
     f('suit.expected'),
     {rulesMatcher: 'suit'}
     );
+  compare(
+    f('reset-size'),
+    f('reset-size.expected'),
+    {reset: 'sizes'});
   t.end();
 });
