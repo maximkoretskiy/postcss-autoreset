@@ -25,6 +25,11 @@ test('postcss-autoreset', (t)=> {
     f('filter-bem.expected')
     );
   compare(
+    f('filter-custom'),
+    f('filter-custom.expected'),
+    {rulesMatcher: (rule)=> rule.selector.match(/jon\-hopkins/)}
+    );
+  compare(
     f('filter-suit'),
     f('filter-suit.expected'),
     {rulesMatcher: 'suit'}
