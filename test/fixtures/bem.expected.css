@@ -1,0 +1,28 @@
+.block {
+  all: initial;
+  padding: 1em;
+}
+
+.block__element {
+  all: initial;
+  margin: 1em;
+}
+
+.block--modifier {
+  border: 1em;
+}
+
+.long-block-name {
+  all: initial;
+  width: 100em;
+}
+
+.long-block-name__long-element-name {
+  all: initial;
+  height: 100em;
+}
+
+.long-block-name--long-modifier-name {
+  size: 100em;
+}
+

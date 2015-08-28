@@ -1,15 +1,18 @@
 import postcss from 'postcss';
+import getRulesMatcher from './rulesMatcher';
+import getResetRules from './resetRules';
 
-export default postcss.plugin('postcss-autoreset', ()=> {
+export default postcss.plugin('postcss-autoreset', (opts = {})=> {
+  opts.rulesMatcher |=  'bem';
+  opts.reset |= 'initial';
+  const rulesMatcher = getRulesMatcher(opts.rulesMatcher);
+  const resetRules = getResetRules(opts.reset);
   return (css) => {
-    css.walkRules( (rule)=> {
-      const firstNode = rule.nodes[0];
-      if (firstNode) {
-        firstNode.cloneAfter({prop: 'all', value: 'unset'});
-      }else {
-        rule.nodes.push(
-          postcss.decl({prop: 'all', value: 'unset'})
-        );
+    css.walkRules((rule)=> {
+      if ( !rulesMatcher(rule) ) return;
+      for (const prop in resetRules) {
+        if (!resetRules.hasOwnProperty(prop)) continue;
+        rule.prepend({prop, value: resetRules[prop]});
       }
     });
   };

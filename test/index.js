@@ -5,7 +5,7 @@ import plugin from '../src';
 
 function f(name) {
   const fullName = 'test/fixtures/' + name + '.css';
-  return fs.readFileSync(fullName, 'utf8');
+  return fs.readFileSync(fullName, 'utf8').trim();
 }
 
 function makeCompareFn(t) {
@@ -21,8 +21,8 @@ test('postcss-autoreset', (t)=> {
   const compare = makeCompareFn(t);
 
   compare(
-    f('default'),
-    f('default.expected')
+    f('bem'),
+    f('bem.expected')
     );
   t.end();
 });
