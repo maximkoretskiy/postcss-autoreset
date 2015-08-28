@@ -1,5 +1,5 @@
 {
-  "name": "postcss-reset",
+  "name": "postcss-autoreset",
   "version": "1.0.0",
   "description": "PostCSS plugin for partial styles reset",
   "main": "dist/index.js",
@@ -11,13 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/maximkoretskiy/postcss-reset.git"
+    "url": "https://github.com/maximkoretskiy/postcss-autoreset.git"
   },
   "keywords": [
     "postcss",
     "postcss-plugin",
     "css",
     "reset",
+    "autoreset",
     "isolation"
   ],
   "author": "Maksim Koretskiy",
