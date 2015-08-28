@@ -36,6 +36,7 @@
     "babel-eslint": "^4.0.10",
     "babel-tape-runner": "^1.2.0",
     "eslint": "^1.2.1",
+    "eslint-config-airbnb": "0.0.8",
     "tap-difflet": "^0.3.0",
     "tap-spec": "^4.1.0",
     "tape": "^4.2.0"
