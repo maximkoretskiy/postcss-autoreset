@@ -21,12 +21,12 @@ test('postcss-autoreset', (t)=> {
   const compare = makeCompareFn(t);
 
   compare(
-    f('bem'),
-    f('bem.expected')
+    f('filter-bem'),
+    f('filter-bem.expected')
     );
   compare(
-    f('suit'),
-    f('suit.expected'),
+    f('filter-suit'),
+    f('filter-suit.expected'),
     {rulesMatcher: 'suit'}
     );
   compare(
