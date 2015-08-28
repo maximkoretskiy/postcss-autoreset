@@ -6,7 +6,7 @@ const matchers = {
 
   suit(rule) {
     const selector = rule.selector;
-    return !(selector.match(/\-\-/) || selector.match('^\.\-is'));
+    return !(selector.match(/--/) || selector.match(/\.is\-/i));
   },
 };
 

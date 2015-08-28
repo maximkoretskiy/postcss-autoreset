@@ -24,5 +24,10 @@ test('postcss-autoreset', (t)=> {
     f('bem'),
     f('bem.expected')
     );
+  compare(
+    f('suit'),
+    f('suit.expected'),
+    {rulesMatcher: 'suit'}
+    );
   t.end();
 });

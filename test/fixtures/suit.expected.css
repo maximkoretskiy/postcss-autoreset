@@ -1,0 +1,19 @@
+.MyComponent {
+  all: initial;
+  padding: 1em;
+}
+.MyComponent.is-animating {
+  cat: dog;
+}
+.MyComponent--modifier {
+  dog: cat;
+}
+
+.MyComponent-part {
+  all: initial;
+  margin: 10px;
+}
+.MyComponent-anotherPart {
+  all: initial;
+  background-color: #FFF;
+}
