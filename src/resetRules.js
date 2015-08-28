@@ -7,8 +7,15 @@ const resetSizes = {
   'vertical-align': 'baseline',
 };
 
-function getResetRules(name = 'initial') {
-  switch (name) {
+function isObject(variable) {
+  return variable !== null && typeof variable === 'object';
+}
+
+function getResetRules(value = 'initial') {
+  if (isObject(value)) {
+    return value;
+  }
+  switch (value) {
   case 'sizes':
     return resetSizes;
   case 'initial':

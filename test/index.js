@@ -33,5 +33,12 @@ test('postcss-autoreset', (t)=> {
     f('reset-size'),
     f('reset-size.expected'),
     {reset: 'sizes'});
+  compare(
+    f('reset-custom'),
+    f('reset-custom.expected'),
+    {reset: {
+      'margin-left': '100%',
+      'transform': 'rotate(90deg)',
+    }});
   t.end();
 });
