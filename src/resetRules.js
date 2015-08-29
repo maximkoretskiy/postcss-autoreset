@@ -4,7 +4,7 @@ const resetSizes = {
   border: '0',
   'font-size': '100%',
   font: 'inherit',
-  'vertical-align': 'baseline',
+  'vertical-align': 'baseline'
 };
 
 function isObject(variable) {
@@ -16,11 +16,11 @@ function getResetRules(value = 'initial') {
     return value;
   }
   switch (value) {
-  case 'sizes':
-    return resetSizes;
-  case 'initial':
-  default:
-    return {all: 'initial'};
+    case 'sizes':
+      return resetSizes;
+    case 'initial':
+    default:
+      return {all: 'initial'};
   }
 }
 

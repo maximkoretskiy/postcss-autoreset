@@ -7,7 +7,7 @@ const matchers = {
   suit(rule) {
     const selector = rule.selector;
     return !(selector.match(/--/) || selector.match(/\.is\-/i));
-  },
+  }
 };
 
 function getRulesMatcher(value = 'bem') {
@@ -16,11 +16,11 @@ function getRulesMatcher(value = 'bem') {
   }
 
   switch (value) {
-  case 'suit':
-    return matchers.suit;
-  case 'bem':
-  default:
-    return matchers.bem;
+    case 'suit':
+      return matchers.suit;
+    case 'bem':
+    default:
+      return matchers.bem;
   }
 }
 
