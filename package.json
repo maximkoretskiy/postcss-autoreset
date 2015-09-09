@@ -33,7 +33,7 @@
   "homepage": "https://github.com/maximkoretskiy/postcss-reset",
   "devDependencies": {
     "babel": "^5.8.21",
-    "babel-eslint": "^4.0.10",
+    "babel-eslint": "^4.1.1",
     "babel-tape-runner": "^1.2.0",
     "eslint": "^1.2.1",
     "tap-difflet": "^0.3.0",
@@ -41,6 +41,6 @@
     "tape": "^4.2.0"
   },
   "dependencies": {
-    "postcss": "^5.0.2"
+    "postcss": "^5.0.4"
   }
 }
