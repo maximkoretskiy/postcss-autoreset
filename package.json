@@ -7,7 +7,8 @@
     "prepublish": "babel src --out-dir dist",
     "lint": "eslint ./src",
     "tape": "babel-tape-runner 'test/*.js' | tap-difflet",
-    "test": "npm run lint && npm run tape"
+    "test": "npm run lint && npm run tape",
+    "precommit": "npm test"
   },
   "repository": {
     "type": "git",
@@ -37,6 +38,7 @@
     "babel-preset-stage-0": "^6.3.13",
     "babel-tape-runner": "^2.0.0",
     "eslint": "^1.2.1",
+    "husky": "^0.10.2",
     "tap-difflet": "^0.4.0",
     "tap-spec": "^4.1.0"
   },
