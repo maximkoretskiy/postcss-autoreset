@@ -2,6 +2,7 @@ import fs from 'fs';
 import test from 'tape';
 import postcss from 'postcss';
 import plugin from '../src';
+import postcssJs from 'postcss-js';
 
 function f(name) {
   const fullName = 'test/fixtures/' + name + '.css';
@@ -14,6 +15,12 @@ function makeCompareFn(t) {
       .use(plugin(opts))
       .process(input).css;
     t.equal(css, output);
+  };
+}
+function makeCompareJsFn(t) {
+  const autoresetJs = postcssJs.sync([plugin]);
+  return (input, output) => {
+    t.deepEqual(autoresetJs(input), output);
   };
 }
 
@@ -42,8 +49,10 @@ test('postcss-autoreset', (t)=> {
     f('reset-custom'),
     f('reset-custom.expected'),
     {reset: {
-      'margin-left': '100%',
-      'transform': 'rotate(90deg)',
+      marginLeft: '100%',
+      transform: 'rotate(90deg)'
     }});
+
+
   t.end();
 });
