@@ -1,11 +1,12 @@
 # PostCSS Auto Reset
+
 [![Build Status][ci-img]][ci] [![NPM][npm-img]][npm] [![David DM][david-img]][david]
 
 <img align="right" width="135" height="95"
      title="Philosopher’s stone, logo of PostCSS"
      src="http://postcss.github.io/postcss/logo-leftp.png">
 
-[PostCSS] plugin for automatic conditional rules reset. Useful for creation of 
+[PostCSS] plugin for automatic conditional rules reset. Useful for creation of
 bullet-proof styles isolation in your extension. Can be used in combination with
 [postcss-initial][initial].
 
@@ -51,7 +52,7 @@ bullet-proof styles isolation in your extension. Can be used in combination with
 }
 ```
 
-## Options 
+## Options
 
 ### reset
 Set of properties that we use to reset rules.  
@@ -60,15 +61,15 @@ Possible values:
  - 'initial' - `all: initial`;
  - 'sizes' - reset size properties.
 
-Use object to create your own reset.
+Use object to create your own reset. CSS-in-JS notation is supported.
 
 **Example**
 ```js
 postcss([ require('postcss-autoreset')({
     reset: {
-      'margin': '0',
-      'padding': '0',
-      'border-radius': '0'
+      margin: 0,
+      padding: 0,
+      borderRadius: 0
     }
   })])
 ```
