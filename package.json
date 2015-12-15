@@ -32,11 +32,12 @@
   },
   "homepage": "https://github.com/maximkoretskiy/postcss-reset",
   "devDependencies": {
-    "babel": "^5.8.21",
-    "babel-eslint": "^4.1.1",
-    "babel-tape-runner": "^1.2.0",
+    "babel-cli": "^6.3.17",
+    "babel-eslint": "^5.0.0-beta6",
+    "babel-preset-stage-0": "^6.3.13",
+    "babel-tape-runner": "^2.0.0",
     "eslint": "^1.2.1",
-    "tap-difflet": "^0.3.0",
+    "tap-difflet": "^0.4.0",
     "tap-spec": "^4.1.0"
   },
   "dependencies": {
