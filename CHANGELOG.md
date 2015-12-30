@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Roll back dependencies update to fix test suite work
 
 ## [1.1.0] - 2015-12-16
-- Added `css2js` custom rules notation support
+- Added `css2js` custom rules notation support. Thnx to @ai for idea
 - Update deps
 
 ## [1.0.0] - 2015-08-29
