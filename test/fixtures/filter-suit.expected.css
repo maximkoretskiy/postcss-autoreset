@@ -2,6 +2,9 @@
   all: initial;
   padding: 1em;
 }
+.MyComponent:hover {
+  background-color: red;
+}
 .MyComponent.is-animating {
   cat: dog;
 }
