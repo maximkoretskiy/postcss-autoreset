@@ -1,11 +1,9 @@
-
 const matchers = {
-  bem(rule) {
-    return !rule.selector.match(/(--|:)/);
+  bem({selector}) {
+    return !selector.match(/(--|:)/);
   },
 
-  suit(rule) {
-    const selector = rule.selector;
+  suit({selector}) {
     return !(selector.match(/(--|:)/) || selector.match(/\.is\-/i));
   }
 };
