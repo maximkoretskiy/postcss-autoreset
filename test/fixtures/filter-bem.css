@@ -2,6 +2,10 @@
   padding: 1em;
 }
 
+.block:hover {
+  background-color: red;
+}
+
 .block__element {
   margin: 1em;
 }

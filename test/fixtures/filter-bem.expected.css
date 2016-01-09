@@ -3,6 +3,10 @@
   padding: 1em;
 }
 
+.block:hover {
+  background-color: red;
+}
+
 .block__element {
   all: initial;
   margin: 1em;
@@ -25,4 +29,3 @@
 .long-block-name--long-modifier-name {
   size: 100em;
 }
-
