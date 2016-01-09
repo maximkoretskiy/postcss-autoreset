@@ -26,6 +26,10 @@ bullet-proof styles isolation in your extension. Can be used in combination with
   padding: 1em;
 }
 
+.block:hover {
+  background-color: red;
+}
+
 .block__element {
   margin: 1em;
 }
@@ -40,6 +44,10 @@ bullet-proof styles isolation in your extension. Can be used in combination with
 .block { /* reseted */
   all: initial;
   padding: 1em;
+}
+
+.block:hover { /* ignored, we don`t need to reset pseudoclasses  */
+  background-color: red;
 }
 
 .block__element { /* reseted */
@@ -80,8 +88,8 @@ postcss([ require('postcss-autoreset')({
 Rules filter function.  
 Takes `string` or `function`.  
 Possible values:
- - 'bem' - reset all BEM blocks and element, ignore modifiers. (naming: `.block__element-modifier`);
- - 'suit' - reset all SUIT CSS components and parts, ignore modifiers and states.
+ - 'bem' - reset all BEM blocks and element, ignore modifiers and pseudoclasses. (naming: `.block__element-modifier`);
+ - 'suit' - reset all SUIT CSS components and parts, ignore modifiers, states and pseudoclasses.
 
 You can define custom rules filter to fit your styles naming.  
 
