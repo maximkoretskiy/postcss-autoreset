@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.1.2] - 2016-01-10
+- Fixed default matchers pseudoclasses matching. Thnx to @kinday for contribution.
+
 ## [1.1.1] - 2015-12-16
 - Roll back dependencies update to fix test suite work
 
