@@ -13,11 +13,11 @@ function process(fileName, opts) {
   const input = read(fileName);
   const output = postcss()
     .use(plugin(opts))
-    .process(input)
+    .process(input);
   return output;
 }
 
-test('Works fine with bem rules matcher(default)',t => {
+test('Works fine with bem rules matcher(default)', t => {
   t.same(
     process('filter-bem').css,
     read('filter-bem.expected')
