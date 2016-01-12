@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 - Change test suite from tape to ava
+- Update deps
 
 ## [1.1.2] - 2016-01-10
 - Fixed default matchers pseudoclasses matching. Thnx to @kinday for contribution.
