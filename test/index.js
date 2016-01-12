@@ -1,58 +1,69 @@
+import test from 'ava';
 import fs from 'fs';
-import test from 'tape';
 import postcss from 'postcss';
+import 'babel-register';
 import plugin from '../src';
-import postcssJs from 'postcss-js';
 
-function f(name) {
-  const fullName = 'test/fixtures/' + name + '.css';
+function read(name) {
+  const fullName = './fixtures/' + name + '.css';
   return fs.readFileSync(fullName, 'utf8').trim();
 }
 
-function makeCompareFn(t) {
-  return (input, output, opts = {}) => {
-    const css = postcss()
-      .use(plugin(opts))
-      .process(input).css;
-    t.equal(css, output);
-  };
-}
-function makeCompareJsFn(t) {
-  const autoresetJs = postcssJs.sync([plugin]);
-  return (input, output) => {
-    t.deepEqual(autoresetJs(input), output);
-  };
+function process(fileName, opts) {
+  const input = read(fileName);
+  const output = postcss()
+    .use(plugin(opts))
+    .process(input)
+  return output;
 }
 
-test('postcss-autoreset', (t)=> {
-  const compare = makeCompareFn(t);
+test('Works fine with bem rules matcher(default)',t => {
+  t.same(
+    process('filter-bem').css,
+    read('filter-bem.expected')
+  );
+});
 
-  compare(
-    f('filter-bem'),
-    f('filter-bem.expected')
-    );
-  compare(
-    f('filter-custom'),
-    f('filter-custom.expected'),
-    {rulesMatcher: (rule)=> rule.selector.match(/jon\-hopkins/)}
-    );
-  compare(
-    f('filter-suit'),
-    f('filter-suit.expected'),
-    {rulesMatcher: 'suit'}
-    );
-  compare(
-    f('reset-size'),
-    f('reset-size.expected'),
-    {reset: 'sizes'});
-  compare(
-    f('reset-custom'),
-    f('reset-custom.expected'),
-    {reset: {
-      marginLeft: '100%',
-      transform: 'rotate(90deg)'
-    }});
+test('Works fine with suit rules matcher', t => {
+  t.same(
+    process(
+      'filter-suit',
+      {rulesMatcher: 'suit'}
+    ).css,
+    read('filter-suit.expected')
+  );
+});
+
+test('Works fine with custom rules matcher', t => {
+  t.same(
+    process(
+      'filter-custom',
+      {rulesMatcher: (rule)=> rule.selector.match(/jon\-hopkins/)}
+    ).css,
+    read('filter-custom.expected')
+  );
+});
 
 
-  t.end();
+test('Sizes reset is available', t => {
+  t.same(
+    process(
+      'reset-size',
+      {reset: 'sizes'}
+    ).css,
+    read('reset-size.expected')
+  );
+});
+
+test('Custom reset is available and uses css2js notation', t => {
+  t.same(
+    process(
+      'reset-custom',
+      {reset: {
+        marginLeft: '100%',
+        transform: 'rotate(90deg)'
+      }}
+    ).css,
+    read('reset-custom.expected')
+  );
 });

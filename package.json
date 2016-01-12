@@ -6,8 +6,7 @@
   "scripts": {
     "prepublish": "babel src --out-dir dist",
     "lint": "eslint ./src",
-    "tape": "babel-tape-runner 'test/*.js' | tap-difflet",
-    "test": "npm run lint && npm run tape",
+    "test": "npm run lint && ava",
     "precommit": "npm test"
   },
   "repository": {
@@ -33,17 +32,23 @@
   },
   "homepage": "https://github.com/maximkoretskiy/postcss-reset",
   "devDependencies": {
-    "babel": "^5.8.21",
+    "ava": "^0.9.1",
+    "babel-cli": "^6.4.0",
     "babel-eslint": "^4.1.1",
-    "babel-tape-runner": "^1.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-register": "^6.3.13",
     "eslint": "^1.2.1",
-    "husky": "^0.10.2",
-    "tap-difflet": "^0.3.0",
-    "tap-spec": "^4.1.0",
-    "tape": "^4.4.0"
+    "husky": "^0.10.2"
   },
   "dependencies": {
     "postcss": "^5.0.4",
     "postcss-js": "^0.1.1"
+  },
+  "ava": {
+    "files": [
+      "test/ava.js"
+    ],
+    "failFast": true,
+    "verbose": true
   }
 }
