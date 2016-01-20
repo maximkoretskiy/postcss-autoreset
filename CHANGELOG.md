@@ -4,8 +4,10 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
-- Put all resets in one rule
-- Add virtual source for generated code
+
+## [1.1.3]
+- Put all resets in one rule. Thnx @DanGamble89 for idea
+- Add virtual source for generated code. Thnx @ai for review
 - Change test suite from tape to ava
 - Change test suite from ava to mocha(for more helpfull diffs)
 - Update deps
