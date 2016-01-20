@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 - Change test suite from tape to ava
+- Change test suite from ava to mocha(for more helpfull diffs)
 - Update deps
 
 ## [1.1.2] - 2016-01-10
