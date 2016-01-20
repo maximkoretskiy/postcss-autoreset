@@ -1,21 +1,5 @@
 import assert from 'assert';
-import fs from 'fs';
-import postcss from 'postcss';
-import plugin from '../src';
-
-function read(name) {
-  const fullName = './test/fixtures/' + name + '.css';
-  return fs.readFileSync(fullName, 'utf8').trim();
-}
-
-function process(fileName, opts) {
-  const input = read(fileName);
-  const output = postcss()
-    .use(plugin(opts))
-    .process(input);
-  return output;
-}
-
+import {read, process} from './helpers';
 
 describe('postcss-autoreset', ()=>{
   it('works fine with bem rules matcher(default)', ()=> {
@@ -65,5 +49,11 @@ describe('postcss-autoreset', ()=>{
       ).css,
       read('reset-custom.expected')
     );
+  });
+
+  it('sets source virtual source for inserted code', ()=>{
+    const output = process('filter-bem');
+    assert(output.root.first.source);
+    assert(output.root.first.source.input.file.match(/postcss\-autoreset/));
   });
 });

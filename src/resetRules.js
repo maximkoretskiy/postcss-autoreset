@@ -11,7 +11,7 @@ function isObject(variable) {
   return variable !== null && typeof variable === 'object';
 }
 
-function getResetRules(value = 'initial') {
+function getReset(value = 'initial') {
   if (isObject(value)) {
     return value;
   }
@@ -24,4 +24,4 @@ function getResetRules(value = 'initial') {
   }
 }
 
-export default getResetRules;
+export default getReset;

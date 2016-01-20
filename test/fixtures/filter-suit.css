@@ -1,12 +1,15 @@
 .MyComponent {
   padding: 1em;
 }
+
 .MyComponent:hover {
   background-color: red;
 }
+
 .MyComponent.is-animating {
   cat: dog;
 }
+
 .MyComponent--modifier {
   dog: cat;
 }
@@ -14,6 +17,7 @@
 .MyComponent-part {
   margin: 10px;
 }
+
 .MyComponent-anotherPart {
   background-color: #FFF;
 }

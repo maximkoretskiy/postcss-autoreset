@@ -1,22 +1,29 @@
-.MyComponent {
+.MyComponent,
+.MyComponent-part,
+.MyComponent-anotherPart {
   all: initial;
+}
+
+.MyComponent {
   padding: 1em;
 }
+
 .MyComponent:hover {
   background-color: red;
 }
+
 .MyComponent.is-animating {
   cat: dog;
 }
+
 .MyComponent--modifier {
   dog: cat;
 }
 
 .MyComponent-part {
-  all: initial;
   margin: 10px;
 }
+
 .MyComponent-anotherPart {
-  all: initial;
   background-color: #FFF;
 }

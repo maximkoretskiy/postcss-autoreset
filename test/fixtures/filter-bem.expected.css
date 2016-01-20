@@ -1,5 +1,11 @@
-.block {
+.block,
+.block__element,
+.long-block-name,
+.long-block-name__long-element-name {
   all: initial;
+}
+
+.block {
   padding: 1em;
 }
 
@@ -8,7 +14,6 @@
 }
 
 .block__element {
-  all: initial;
   margin: 1em;
 }
 
@@ -17,12 +22,10 @@
 }
 
 .long-block-name {
-  all: initial;
   width: 100em;
 }
 
 .long-block-name__long-element-name {
-  all: initial;
   height: 100em;
 }
 

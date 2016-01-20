@@ -1,8 +1,11 @@
+.class-name-with-jon-hopkins {
+  all: initial;
+}
+
 .class-name-with-kevin-spacey{
   transform: rotate(90deg);
 }
 
 .class-name-with-jon-hopkins{
-  all: initial;
   transform: rotate(-90deg);
 }

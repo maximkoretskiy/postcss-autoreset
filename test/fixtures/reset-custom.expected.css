@@ -1,5 +1,7 @@
 .block {
   margin-left: 100%;
   transform: rotate(90deg);
+}
+.block {
   color: red;
 }
