@@ -3,7 +3,7 @@ import jsToCss from 'postcss-js/parser';
 import Input from 'postcss/lib/input';
 
 const source = {
-  input: new Input('', { from: 'postcss-autoreset' }),
+  input: new Input('', {from: 'postcss-autoreset'}),
   start: {line: 1, column: 1},
   end: {line: 1, column: 1}
 };

@@ -5,8 +5,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.1.5] - 2016-01-21
+- Fix plugin prepublish script again with babel-plugin-add-module-exports. Thnx @mikaa123 for patience %)
+- Add integration test to prevent this bug.
+
 ## [1.1.4] - 2016-01-21
-- Fix plugin prepublish script. Thnx @mikaa123 for bugreport
+- Fix plugin prepublish script with babel-plugin-transform-es2015-modules-umd. Thnx @mikaa123 for bugreport
 
 ## [1.1.3] - 2016-01-21
 - Put all resets in one rule. Thnx @DanGamble89 for idea
