@@ -3,7 +3,7 @@ import getRulesMatcher from './rulesMatcher';
 import getReset from './resetRules';
 import createResetRule from './createResetRule';
 
-export default postcss.plugin('postcss-autoreset', (opts = {})=> {
+module.exports = postcss.plugin('postcss-autoreset', (opts = {})=> {
   opts.rulesMatcher = opts.rulesMatcher || 'bem';
   opts.reset = opts.reset || 'initial';
   const rulesMatcher = getRulesMatcher(opts.rulesMatcher);
