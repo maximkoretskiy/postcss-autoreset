@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.1.4] - 2016-01-21
+- Fix plugin prepublish script. Thnx @mikaa123 for bugreport
+
 ## [1.1.3] - 2016-01-21
 - Put all resets in one rule. Thnx @DanGamble89 for idea
 - Add virtual source for generated code. Thnx @ai for review
