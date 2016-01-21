@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
-## [1.1.3]
+## [1.1.3] - 2016-01-21
 - Put all resets in one rule. Thnx @DanGamble89 for idea
 - Add virtual source for generated code. Thnx @ai for review
 - Change test suite from tape to ava
