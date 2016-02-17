@@ -41,8 +41,11 @@ bullet-proof styles isolation in your extension. Can be used in combination with
 ```
 
 ```css
-.block { /* reseted */
+.block, .block__element { /* combined reset block */
   all: initial;
+}
+
+.block { /* reseted */
   padding: 1em;
 }
 
@@ -51,7 +54,6 @@ bullet-proof styles isolation in your extension. Can be used in combination with
 }
 
 .block__element { /* reseted */
-  all: initial;
   margin: 1em;
 }
 
