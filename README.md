@@ -20,6 +20,7 @@ bullet-proof styles isolation in your extension. Can be used in combination with
 [david]:      https://david-dm.org/maximkoretskiy/postcss-autoreset
 [initial]:    https://github.com/maximkoretskiy/postcss-initial
 
+The following CSS uses [Block Element Modifier](http://getbem.com/).
 
 ```css
 .block {
