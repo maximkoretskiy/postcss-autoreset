@@ -20,7 +20,7 @@ bullet-proof styles isolation in your extension. Can be used in combination with
 [david]:      https://david-dm.org/maximkoretskiy/postcss-autoreset
 [initial]:    https://github.com/maximkoretskiy/postcss-initial
 
-The following CSS uses [Block Element Modifier](http://getbem.com/).
+The following CSS is written in [BEM](https://en.bem.info/) notation.
 
 ```css
 .block {
@@ -91,8 +91,8 @@ postcss([ require('postcss-autoreset')({
 Rules filter function.  
 Takes `string` or `function`.  
 Possible values:
- - 'bem' - reset all BEM blocks and element, ignore modifiers and pseudoclasses. (naming: `.block__element-modifier`);
- - 'suit' - reset all SUIT CSS components and parts, ignore modifiers, states and pseudoclasses.
+ - 'bem' - reset all [BEM](https://en.bem.info/) blocks and element, ignore modifiers and pseudoclasses. (naming: `.block__element-modifier`);
+ - 'suit' - reset all [SUIT CSS](https://suitcss.github.io/) components and parts, ignore modifiers, states and pseudoclasses.
 
 You can define custom rules filter to fit your styles naming.  
 
