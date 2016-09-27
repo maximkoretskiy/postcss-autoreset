@@ -6,6 +6,18 @@
   background-color: red;
 }
 
+.namespace-MyComponent {
+  cat: dog;
+}
+
+.namespace-MyComponent-desc {
+  cat: dog;
+}
+
+.MyComponent[aria-hidden="true"] {
+  display: none;
+}
+
 .MyComponent.is-animating {
   cat: dog;
 }

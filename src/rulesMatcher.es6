@@ -1,10 +1,15 @@
+/**
+ * Demo - https://regex101.com/r/AA4xaq/3
+ */
+const suitRegex = /^\.(?:[a-z0-9]*-)?[A-Z](?:[a-zA-Z0-9]+)(?:-[a-zA-Z0-9]+)?$/;
+
 const matchers = {
   bem({selector}) {
     return !selector.match(/(--|:)/);
   },
 
   suit({selector}) {
-    return !(selector.match(/(--|:)/) || selector.match(/\.is\-/i));
+    return selector.charAt(0) === '.' && suitRegex.test(selector);
   }
 };
 
