@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.2.0] - 2016-09-29
+- Improved accuracy of SUIT CSS regex (see https://github.com/maximkoretskiy/postcss-autoreset/pull/17 and https://github.com/maximkoretskiy/postcss-autoreset/issues/16). Thnx @giuseppeg and @simonsmith for suggestion and contribution.
+
 ## [1.1.5] - 2016-01-21
 - Fix plugin prepublish script again with babel-plugin-add-module-exports. Thnx @mikaa123 for patience %)
 - Add integration test to prevent this bug.
