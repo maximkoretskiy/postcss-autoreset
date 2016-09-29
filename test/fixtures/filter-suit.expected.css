@@ -1,4 +1,6 @@
 .MyComponent,
+.namespace-MyComponent,
+.namespace-MyComponent-desc,
 .MyComponent-part,
 .MyComponent-anotherPart {
   all: initial;
@@ -10,6 +12,18 @@
 
 .MyComponent:hover {
   background-color: red;
+}
+
+.namespace-MyComponent {
+  cat: dog;
+}
+
+.namespace-MyComponent-desc {
+  cat: dog;
+}
+
+.MyComponent[aria-hidden="true"] {
+  display: none;
 }
 
 .MyComponent.is-animating {
