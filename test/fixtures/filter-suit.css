@@ -30,6 +30,18 @@
   margin: 10px;
 }
 
+@media (min-width: 800px) {
+  .MyComponent-part {
+    margin: 10px;
+  }
+}
+
+.MyComponent {
+  & .MyComponent-part {
+    margin: 10px;
+  }
+}
+
 .MyComponent-anotherPart {
   background-color: #FFF;
 }

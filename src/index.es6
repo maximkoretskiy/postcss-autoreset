@@ -3,6 +3,8 @@ import getRulesMatcher from './rulesMatcher';
 import getReset from './resetRules';
 import createResetRule from './createResetRule';
 
+const contains = (array, item) => array.indexOf(item) !== -1;
+
 export default postcss.plugin('postcss-autoreset', (opts = {})=> {
   opts.rulesMatcher = opts.rulesMatcher || 'bem';
   opts.reset = opts.reset || 'initial';
@@ -11,8 +13,9 @@ export default postcss.plugin('postcss-autoreset', (opts = {})=> {
   return (css) => {
     const matchedSelectors = [];
     css.walkRules((rule)=> {
-      if (rulesMatcher(rule)) {
-        matchedSelectors.push(rule.selector);
+      const {selector} = rule;
+      if (!contains(matchedSelectors, selector) && rulesMatcher(rule)) {
+        matchedSelectors.push(selector);
       }
     });
     if (!matchedSelectors.length) return;
