@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [1.2.1] - 2016-10-09
+Thnx to @giuseppeg and simonsmith for contribution!
 - Do not modify css if not required
 - Fix duplicate selector issue when using nested rulesets. ([#18](https://github.com/maximkoretskiy/postcss-autoreset/pull/18))
 
