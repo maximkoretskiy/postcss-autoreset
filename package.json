@@ -1,6 +1,6 @@
 {
   "name": "postcss-autoreset",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "PostCSS plugin for partial styles reset",
   "main": "dist/index.js",
   "scripts": {
