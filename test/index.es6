@@ -2,6 +2,13 @@ import assert from 'assert';
 import {read, process} from './helpers';
 
 describe('postcss-autoreset', ()=>{
+  it('does not modify if there if nothing to require', ()=> {
+    assert.equal(
+      process('empty').css,
+      read('empty')
+    );
+  });
+
   it('works fine with bem rules matcher(default)', ()=> {
     assert.equal(
       process('filter-bem').css,

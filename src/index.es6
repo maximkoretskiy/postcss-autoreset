@@ -15,6 +15,7 @@ export default postcss.plugin('postcss-autoreset', (opts = {})=> {
         matchedSelectors.push(rule.selector);
       }
     });
+    if (!matchedSelectors.length) return;
     css.prepend(
       createResetRule(matchedSelectors, reset)
     );
