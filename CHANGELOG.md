@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+- do not modify css if not required
 
 ## [1.2.0] - 2016-09-29
 - Improved accuracy of SUIT CSS regex (see https://github.com/maximkoretskiy/postcss-autoreset/pull/17 and https://github.com/maximkoretskiy/postcss-autoreset/issues/16). Thnx @giuseppeg and @simonsmith for suggestion and contribution.
