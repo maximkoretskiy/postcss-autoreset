@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [2.0.0] - 2017-07-30
 - Update to PostCSS 6
 
 ## [1.2.1] - 2016-10-09
