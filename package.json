@@ -46,7 +46,7 @@
     "mocha": "^3.4.2"
   },
   "dependencies": {
-    "postcss": "^5.0.14",
-    "postcss-js": "^0.1.1"
+    "postcss": "^6.0.1",
+    "postcss-js": "^1.0.0"
   }
 }
