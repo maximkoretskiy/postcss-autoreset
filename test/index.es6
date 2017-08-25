@@ -1,71 +1,51 @@
 import assert from 'assert';
-import {read, process} from './helpers';
+import {match ,read, process} from './helpers';
 
 describe('postcss-autoreset', ()=>{
   it('does not modify if there if nothing to require', ()=> {
     assert.equal(
-      process('empty').css,
+      process('empty'),
       read('empty')
     );
   });
 
   it('works fine with bem rules matcher(default)', ()=> {
-    assert.equal(
-      process('filter-bem').css,
-      read('filter-bem.expected')
-    );
+    match('filter-bem');
   });
 
   it('works fine with suit rules matcher', ()=> {
-    assert.equal(
-      process(
-        'filter-suit',
-        {rulesMatcher: 'suit'}).css,
-      read('filter-suit.expected')
-    );
+    match('filter-suit', {rulesMatcher: 'suit'});
   });
 
   it('works fine with custom rules matcher', ()=> {
-    assert.equal(
-      process(
-        'filter-custom',
-        {rulesMatcher: (rule)=> rule.selector.match(/jon\-hopkins/)}
-      ).css,
-      read('filter-custom.expected')
+    match(
+      'filter-custom',
+      {rulesMatcher: (rule)=> rule.selector.match(/jon\-hopkins/)}
     );
   });
 
   it('can use custom sizes reset', ()=> {
-    assert.equal(
-      process(
-        'reset-size',
-        {reset: 'sizes'}
-      ).css,
-      read('reset-size.expected')
+    match(
+      'reset-size',
+      {reset: 'sizes'}
     );
   });
 
   it('can use reset in css2js notation', ()=> {
-    assert.equal(
-      process(
-        'reset-custom',
-        {reset: {
-          marginLeft: '100%',
-          transform: 'rotate(90deg)'
-        }}
-      ).css,
-      read('reset-custom.expected')
+    const reset = {
+      reset: {
+        marginLeft: '100%',
+        transform: 'rotate(90deg)'
+      }
+    };
+    match(
+      'reset-custom',
+      reset
     );
   });
 
   it('works gently with keywords', ()=> {
-    assert.equal(
-      process(
-        'keyframes',
-        {reset: 'sizes'}
-      ).css,
-      read('keyframes.expected')
-    );
+    match('keyframes');
   });
 
 

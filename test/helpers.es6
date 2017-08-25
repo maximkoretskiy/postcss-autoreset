@@ -1,5 +1,6 @@
 import fs from 'fs';
 import postcss from 'postcss';
+import assert from 'assert';
 import plugin from '../src';
 
 export function read(name) {
@@ -13,4 +14,13 @@ export function process(fileName, opts) {
     .use(plugin(opts))
     .process(input);
   return output;
+}
+
+export function match(name, opts) {
+  return assert.equal(
+      process(
+        name,
+        opts).css,
+      read(name + '.expected')
+  );
 }
