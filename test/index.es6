@@ -35,7 +35,7 @@ describe('postcss-autoreset', ()=>{
     );
   });
 
-  it('cat use custom sizes reset', ()=> {
+  it('can use custom sizes reset', ()=> {
     assert.equal(
       process(
         'reset-size',
@@ -57,6 +57,17 @@ describe('postcss-autoreset', ()=>{
       read('reset-custom.expected')
     );
   });
+
+  it('works gently with keywords', ()=> {
+    assert.equal(
+      process(
+        'keyframes',
+        {reset: 'sizes'}
+      ).css,
+      read('keyframes.expected')
+    );
+  });
+
 
   it('sets source virtual source for inserted code', ()=>{
     const output = process('filter-bem');
