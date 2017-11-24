@@ -107,7 +107,7 @@ postcss([ require('postcss-autoreset')({
 ## Usage
 
 ```js
-postcss([ require('postcss-autoreset')])
+postcss([ require('postcss-autoreset')()])
 ```
 
 See [PostCSS] docs for examples for your environment.
