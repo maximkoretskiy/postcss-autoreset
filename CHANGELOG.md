@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [2.0.2] - 2018-02-25
+ - Add support for prefixed keyframes(#27, #25). Thnx @olavhaugen for PR
+
 ## [2.0.1] - 2017-08-25
  - Fix keyframes adding to common reset list .Thnx @copycut for suggestion!
 
