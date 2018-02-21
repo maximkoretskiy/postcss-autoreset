@@ -14,7 +14,7 @@ export default postcss.plugin('postcss-autoreset', (opts = {})=> {
     const matchedSelectors = [];
     css.walkRules((rule)=> {
       const {selector} = rule;
-      if (rule.parent.name === 'keyframes') return;
+      if (/^(-(webkit|moz|ms|o)-)?keyframes$/.test(rule.parent.name)) return;
       if (!contains(matchedSelectors, selector) && rulesMatcher(rule)) {
         matchedSelectors.push(selector);
       }
