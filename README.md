@@ -106,9 +106,9 @@ postcss([ require('postcss-autoreset')({
 
 Reset only simple rules. See [#28](https://github.com/maximkoretskiy/postcss-autoreset/issues/28)
 ```js
- require('postcss-autoreset')({
-   rulesMatcher: (rule) => rule.selector.match(/^[.]\w+$/),
-  }),
+postcss([ require('postcss-autoreset')({
+  rulesMatcher: (rule) => rule.selector.match(/^[.]\w+$/),
+})])
 ```
 
 
