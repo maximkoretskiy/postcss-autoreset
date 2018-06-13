@@ -97,10 +97,18 @@ Possible values:
 You can define custom rules filter to fit your styles naming.  
 
 **Example**
+
 ```js
 postcss([ require('postcss-autoreset')({
   rulesMatcher: (rule)=> rule.selector.match(/regexp/)
-  })])
+})])
+```
+
+Reset only simple rules. See [#28](https://github.com/maximkoretskiy/postcss-autoreset/issues/28)
+```js
+ require('postcss-autoreset')({
+   rulesMatcher: (rule) => rule.selector.match(/^[.]\w+$/),
+  }),
 ```
 
 
