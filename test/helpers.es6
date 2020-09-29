@@ -18,9 +18,9 @@ export function process(fileName, opts) {
 
 export function match(name, opts) {
   return assert.equal(
-      process(
-        name,
-        opts).css,
-      read(name + '.expected')
+    process(
+      name,
+      opts).css,
+    read(name + '.expected')
   );
 }

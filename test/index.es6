@@ -1,5 +1,5 @@
 import assert from 'assert';
-import {match ,read, process} from './helpers';
+import {match, read, process} from './helpers';
 
 describe('postcss-autoreset', ()=>{
   it('does not modify if there if nothing to require', ()=> {
@@ -20,7 +20,7 @@ describe('postcss-autoreset', ()=>{
   it('works fine with custom rules matcher', ()=> {
     match(
       'filter-custom',
-      {rulesMatcher: (rule)=> rule.selector.match(/jon\-hopkins/)}
+      {rulesMatcher: (rule)=> rule.selector.match(/jon-hopkins/)}
     );
   });
 
@@ -52,6 +52,6 @@ describe('postcss-autoreset', ()=>{
   it('sets source virtual source for inserted code', ()=>{
     const output = process('filter-bem');
     assert(output.root.first.source);
-    assert(output.root.first.source.input.file.match(/postcss\-autoreset/));
+    assert(output.root.first.source.input.file.match(/postcss-autoreset/));
   });
 });

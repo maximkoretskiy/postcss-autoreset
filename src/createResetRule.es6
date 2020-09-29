@@ -16,7 +16,9 @@ function createResetRule(selectors, reset) {
     raws: {between: ' '}
   });
   const root = jsToCss(reset);
-  root.each(node => node.source = resetRule.source);
+  root.each(node => {
+    node.source = resetRule.source;
+  });
   resetRule.append(root);
   return resetRule;
 }
