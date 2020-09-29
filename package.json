@@ -6,11 +6,10 @@
   "scripts": {
     "prepublish": "npm run build",
     "build": "babel src --out-dir dist",
-    "lint": "eslint 'src/*.es6' 'test/*.es6'",
-    "test": "npm run lint && npm run test-unit && npm run test-integration",
-    "test-unit": "mocha --require babel-register test/index.es6",
-    "test-integration": "npm run build && mocha test/integration.js",
-    "test-dev": "mocha -w --require babel-register test/index.es6",
+    "lint": "eslint 'src/' 'test/'",
+    "test": "npm run lint && npm run test-unit",
+    "test-unit": "mocha --require babel-register test/index.js",
+    "test-dev": "mocha -w --require babel-register test/index.js",
     "precommit": "npm test"
   },
   "repository": {
