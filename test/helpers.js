@@ -1,7 +1,7 @@
 const fs = require("fs");
 const postcss = require("postcss");
 const assert = require("assert");
-const plugin = require("../src");
+const plugin = require("..");
 
 function read(name) {
   const fullName = "./test/fixtures/" + name + ".css";

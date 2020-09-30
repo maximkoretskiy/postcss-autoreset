@@ -4,7 +4,7 @@
   "description": "PostCSS plugin for partial styles reset",
   "main": "dist/index.js",
   "scripts": {
-    "lint": "eslint 'src/' 'test/'",
+    "lint": "eslint index.js lib/ test/",
     "test": "yarn run lint && yarn run test-unit",
     "test-unit": "mocha test/index.js",
     "test-dev": "mocha -w test/index.js",

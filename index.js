@@ -1,7 +1,5 @@
 const postcss = require("postcss");
-const getRulesMatcher = require("./rulesMatcher");
-const getReset = require("./resetRules");
-const createResetRule = require("./createResetRule");
+const { getRulesMatcher, getReset, createResetRule } = require("./lib");
 
 function contains(array, item) {
   return array.indexOf(item) !== -1;
