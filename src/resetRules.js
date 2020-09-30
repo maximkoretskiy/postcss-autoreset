@@ -2,26 +2,24 @@ const resetSizes = {
   margin: 0,
   padding: 0,
   border: 0,
-  fontSize: '100%',
-  font: 'inherit',
-  verticalAlign: 'baseline'
+  fontSize: "100%",
+  font: "inherit",
+  verticalAlign: "baseline",
 };
 
 function isObject(variable) {
-  return variable !== null && typeof variable === 'object';
+  return variable !== null && typeof variable === "object";
 }
 
-function getReset(value = 'initial') {
+module.exports = function getReset(value = "initial") {
   if (isObject(value)) {
     return value;
   }
   switch (value) {
-    case 'sizes':
+    case "sizes":
       return resetSizes;
-    case 'initial':
+    case "initial":
     default:
-      return {all: 'initial'};
+      return { all: "initial" };
   }
-}
-
-export default getReset;
+};

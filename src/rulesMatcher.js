@@ -4,27 +4,25 @@
 const suitRegex = /^\.(?:[a-z0-9]*-)?[A-Z](?:[a-zA-Z0-9]+)(?:-[a-zA-Z0-9]+)?$/;
 
 const matchers = {
-  bem({selector}) {
+  bem({ selector }) {
     return !selector.match(/(--|:)/);
   },
 
-  suit({selector}) {
-    return selector.charAt(0) === '.' && suitRegex.test(selector);
-  }
+  suit({ selector }) {
+    return selector.charAt(0) === "." && suitRegex.test(selector);
+  },
 };
 
-function getRulesMatcher(value = 'bem') {
-  if (typeof value === 'function') {
+module.exports = function getRulesMatcher(value = "bem") {
+  if (typeof value === "function") {
     return value;
   }
 
   switch (value) {
-    case 'suit':
+    case "suit":
       return matchers.suit;
-    case 'bem':
+    case "bem":
     default:
       return matchers.bem;
   }
-}
-
-export default getRulesMatcher;
+};
