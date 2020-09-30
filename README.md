@@ -145,7 +145,7 @@ and set this plugin in settings.
 ```diff
 module.exports = {
   plugins: [
-+   require('postcss-autoreset'),
++   require('postcss-autoreset')(),
     require('autoprefixer')
   ]
 }

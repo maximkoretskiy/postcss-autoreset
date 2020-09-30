@@ -15,7 +15,7 @@ function process(fileName, opts) {
 }
 
 function match(name, opts) {
-  return assert.equal(process(name, opts).css, read(name + ".expected"));
+  return assert.strictEqual(process(name, opts).css, read(name + ".expected"));
 }
 
 module.exports = { process, match, read };
