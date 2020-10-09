@@ -2,7 +2,7 @@
   "name": "postcss-autoreset",
   "version": "3.0.0",
   "description": "PostCSS plugin for partial styles reset",
-  "main": "dist/index.js",
+  "main": "index.js",
   "scripts": {
     "lint": "eslint index.js lib/ test/",
     "test": "yarn run lint && yarn run test-unit",
@@ -25,7 +25,6 @@
   "author": "Maksim Koretskiy",
   "license": "MIT",
   "files": [
-    "dist",
     "README.md"
   ],
   "bugs": {
