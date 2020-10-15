@@ -1,6 +1,6 @@
 {
   "name": "postcss-autoreset",
-  "version": "3.0.1",
+  "version": "3.0.3",
   "description": "PostCSS plugin for partial styles reset",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,9 @@
   "author": "Maksim Koretskiy",
   "license": "MIT",
   "files": [
-    "README.md"
+    "README.md",
+    "index.js",
+    "lib/"
   ],
   "bugs": {
     "url": "https://github.com/maximkoretskiy/postcss-reset/issues"
