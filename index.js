@@ -12,18 +12,18 @@ module.exports = (opts = {}) => {
   return {
     postcssPlugin: "postcss-autoreset",
     prepare() {
-      const matchedSelectors = [];
       return {
-        Rule(rule) {
-          const { selector } = rule;
-          if (/^(-(webkit|moz|ms|o)-)?keyframes$/.test(rule.parent.name)) {
-            return;
-          }
-          if (!contains(matchedSelectors, selector) && rulesMatcher(rule)) {
-            matchedSelectors.push(selector);
-          }
-        },
         OnceExit(root) {
+          const matchedSelectors = [];
+          root.walkRules(rule => {
+            const { selector } = rule;
+            if (/^(-(webkit|moz|ms|o)-)?keyframes$/.test(rule.parent.name)) {
+              return;
+            }
+            if (!contains(matchedSelectors, selector) && rulesMatcher(rule)) {
+              matchedSelectors.push(selector);
+            }
+          });
           if (!matchedSelectors.length) {
             return;
           }
