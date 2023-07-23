@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/maximkoretskiy/postcss-reset",
   "dependencies": {
-    "postcss-js": "^3.0.1"
+    "postcss-js": "^4.0.1"
   },
   "devDependencies": {
     "clean-publish": "^1.1.8",
