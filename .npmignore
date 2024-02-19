@@ -1,8 +1,6 @@
 .gitignore
-
 test/
+package-lock.json
 .travis.yml
-
 gulpfile.js
-
 .eslintrc
