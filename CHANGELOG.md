@@ -5,9 +5,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [3.1.0] - 2024-02-19
+
+- update postcss-js and some dependencies
+
 ## [3.0.4] - 2020-05-21
- - Move the selector matcher to OnceExit
- 
+
+- Move the selector matcher to OnceExit
+
 ## [3.0.0] - 2020-09-29
 
 - Update to PostCSS v8
